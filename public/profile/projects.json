@@ -1,0 +1,93 @@
+{
+    "projects" : [
+        {
+            "image" : "images/projects/portfolio-poster.png",
+            "title": "My Portfolio",
+            "bodyText": "- Personal Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.\n - Dark Mode Support",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Mahanthb/my-portfolio"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://mahanth-portfolio.netlify.app/"
+                }
+            ],
+            "tags" : [
+                "React",
+                "Portfolio",
+                "JavaScript"
+            ]
+        },
+        {
+            "image" : "images/projects/pjs.png",
+            "title": "Print Job Scheduler",
+            "bodyText": "- This C program is a simulation of a **print queue system** that supports different scheduling policies: **Priority, FIFO (First-In-First-Out), and SJN (Shortest Job Next)**. The system also includes authentication for computers trying to add print jobs.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Mahanthb/printjobscheduler"
+                }
+            ],
+            "tags" : [
+                "C",
+                "Queues"
+            ]
+        },
+        {
+            "image" : "images/projects/SMS.jpg",
+            "title": "Store Management System",
+            "bodyText": "- The project, **Store Management System**, aims to provide a comprehensive database solution for managing branches, items, customers, employees, and suppliers in a retail chain. It includes **CRUD** operations, transaction tracking, stock management, and advanced database features like triggers, stored procedures, and views. A front-end using Streamlit enhances usability by enabling interactive access.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Mahanthb/STORE-MANAGEMENT-SYSTEM-DBMS/"
+                }
+            ],
+            "tags" : [
+                "Streamlit",
+                "MySQL",
+                "CRUD",
+                "Python"
+            ]
+        },
+        {
+            "title": "3D Model Viewer and Editor",
+            "bodyText": "- Developed an interactive web application enabling users to upload and manipulate **GLTF/GLB** files from local storage or **Firebase**. Implemented controls for light manipulation, scene properties (wireframe, autorotation, background, grid), mesh hierarchy, and mesh-specific editing (color, wireframe, transparency, position, rotation, scale). Enabled export of edited models back to storage and **integrated augmented reality (AR)** support for viewing models in AR. Additionally, provided functionality for selecting and playing **animations** within the scene.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Mahanthb/virtual-world-project"
+                },
+                {
+                    "text": "Link",
+                    "href": "https://virtual-world-meta.vercel.app/"
+                }
+            ],
+            "tags" : [
+                "React.js",
+                "Three.js",
+                "Firebase",
+                "@google/model-viewer"
+            ]
+        },
+        {
+            "title": "Automated Sketching with Robotic Arm",
+            "bodyText": "- The project entitled **Automated Sketching with Robotic Arm: Integrating NLP for Visual Art Generation** connects human and robotic hands by making it possible to feed in text and audio, which will later be transformed into visuals through the use of skilful language processing. This is then converted into sketching commands, which can be utilized by a robotic arm to draw tangible objects on a real surface accurately and in real time.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Mahanthb/Capstone_project"
+                }
+            ],
+            "tags" : [
+                "NLP",
+                "Niryo Studio",
+                "Flask (Python)",
+                "OpenCV",
+                "HuggingFace"
+            ]
+        }
+    ]
+}

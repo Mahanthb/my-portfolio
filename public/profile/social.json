@@ -1,0 +1,16 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "www.linkedin.com/in/mahanth-kumar-b-772560275"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/Mahanthb"
+        },
+        {
+            "network" : "email",
+            "href": "mailto:mahanthkumarb@gmail.com"
+        }
+    ]
+}

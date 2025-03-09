@@ -1,0 +1,51 @@
+.vertical {
+    justify-content: center;
+}
+
+.vertical_alternating {
+    justify-content: center;
+}
+
+@media only screen and (max-width: 578px) {
+    div.vertical-item-row > div:nth-child(1) {
+        width: 20% !important;
+    }
+    div.vertical-item-row > div:nth-child(2) {
+        width: 65% !important;
+    }
+    div.vertical-item-row > div:nth-child(3) {
+        width: 15% !important;
+    }
+}
+.chrono-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .college-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .college-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .college-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .college-marks {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 5px 0;
+  }

@@ -1,0 +1,30 @@
+{
+    "education": [
+      {
+        "title": "Dec 2022 - May 2026",
+        "cardTitle": "B.Tech, Computer Science Engineering",
+        "cardSubtitle": "PES University, Bangalore",
+        "icon": {
+          "src": "images/education/lorem-ipsum.png"
+        },
+        "collegeImage": "images/education/pes.png",
+        "collegeWebsite": "https://www.pes.edu"
+      },
+      {
+        "title": "May 2022",
+        "cardTitle": "PUC",
+        "cardSubtitle": "Masters PU College, Hassan",
+        "cardDetailedText": "Marks - 96.5%",
+        "collegeImage": "images/education/masters.png",
+        "collegeWebsite": "https://masterpucollege.com/"
+      },
+      {
+        "title": "May 2020",
+        "cardTitle": "SSLC",
+        "cardSubtitle": "Vijaya School, Bangalore",
+        "cardDetailedText": "Marks - 95.2%",
+        "collegeImage": "images/education/vijaya.png",
+        "collegeWebsite": "https://vijayaschoolhsn.in/"
+      }
+    ]
+  }

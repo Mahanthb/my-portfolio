@@ -1,0 +1,13 @@
+{
+    "experiences": [
+        {
+            "title": "Summer Intern",
+            "subtitle": "Fabrik Space - CAVE labs",
+            "workType": "Full-time",
+            "workDescription": [
+                "Completed an internship at PESU C-IoT, a fully funded center by PES University, in collaboration with Fabrik, a deep-tech company specializing in spatial computing solutions for industrial applications.","Contributed to the development of a web application utilizing React Three Fiber and Three.js to enable smooth handling of 3D models in both Augmented Reality (AR) and Virtual Reality (VR) environments."
+            ],
+            "dateText": "06/2024 – 07/2024"
+        }
+    ]
+}
