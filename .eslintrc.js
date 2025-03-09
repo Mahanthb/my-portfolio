@@ -19,6 +19,7 @@ module.exports = {
   ],
   rules: {
     'prefer-template': 0,
+    "no-console": "warn",
     'react/no-children-prop': [0],
     'linebreak-style': 0
   },
