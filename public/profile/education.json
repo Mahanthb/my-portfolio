@@ -1,0 +1,46 @@
+{
+    "education": [
+      {
+        "title": "Sep 2026 - May 2028",
+        "cardTitle": "M.S. in Cybersecurity",
+        "cardSubtitle": "New York University, Tandon School of Engineering",
+        "cardDetailedText": "Coursework: AI in Cybersecurity, Computer Networking, Information Security and Privacy",
+        "icon": {
+          "src": "images/education/nyu.png",
+          "className": "logo-light-background"
+        },
+        "collegeImage": "images/education/nyu.png",
+        "collegeImageClassName": "logo-light-background",
+        "collegeWebsite": "https://engineering.nyu.edu/"
+      },
+      {
+        "title": "Dec 2022 - May 2026",
+        "cardTitle": "B.Tech, Computer Science Engineering",
+        "cardSubtitle": "PES University, Bangalore",
+        "cardDetailedText": "Coursework: Data Structures, Algorithms, Computer Networks, Operating Systems, DBMS, Web Technologies, AR and VR",
+        "icon": {
+          "src": "images/education/pes.png"
+        },
+        "collegeImage": "images/education/pes.png",
+        "collegeWebsite": "https://www.pes.edu"
+      },
+      {
+        "title": "May 2022",
+        "cardTitle": "Class 12th",
+        "cardSubtitle": "Masters PU College, Hassan",
+        "cardDetailedText": "Marks - 96.5%",
+        "collegeImage": "images/education/masters.png",
+        "collegeImageClassName": "logo-light-background",
+        "collegeWebsite": "https://masterpucollege.com/"
+      },
+      {
+        "title": "May 2020",
+        "cardTitle": "Class 10th",
+        "cardSubtitle": "Vijaya School, Bangalore",
+        "cardDetailedText": "Marks - 95.2%",
+        "collegeImage": "images/education/vijaya.png",
+        "collegeImageClassName": "logo-light-background",
+        "collegeWebsite": "https://vijayaschoolhsn.in/"
+      }
+    ]
+  }

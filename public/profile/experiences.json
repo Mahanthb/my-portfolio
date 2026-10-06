@@ -1,0 +1,34 @@
+{
+    "experiences": [
+        {
+            "title": "SDE Intern",
+            "subtitle": "Neurofin AI Technologies Pvt. Ltd.",
+            "workType": "Full-time",
+            "workDescription": [
+                "Developed Generative AI solutions for financial institutions to automate transaction workflows and improve operational efficiency.",
+                "Built AI-powered systems for financial analysis and automated compliance monitoring.",
+                "Implemented intelligent document processing pipelines to extract and structure financial data."
+            ],
+            "dateText": "11/2025 – 07/2026"
+        },
+        {
+            "title": "Summer Intern",
+            "subtitle": "MARS Lab - PESU Center for IoT",
+            "workType": "Full-time",
+            "workDescription": [
+                "Conducted a comparative study of path planning algorithms for robotic sketching using the Niryo Ned 2 robotic arm.",
+                "Evaluated and analyzed path planning approaches to improve robotic sketching performance."
+            ],
+            "dateText": "06/2025 – 07/2025"
+        },
+        {
+            "title": "Summer Intern",
+            "subtitle": "CAVE Lab - PESU Center for IoT",
+            "workType": "Full-time",
+            "workDescription": [
+                "Contributed to a web application using React Three Fiber and Three.js for smooth handling of 3D models in Augmented Reality and Virtual Reality environments."
+            ],
+            "dateText": "06/2024 – 07/2024"
+        }
+    ]
+}

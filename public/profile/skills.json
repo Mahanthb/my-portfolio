@@ -1,0 +1,87 @@
+{
+    "intro": "I build software across cybersecurity, artificial intelligence, web development, and robotics. These are the languages, technologies, tools, and platforms I work with:",
+    "skills": [{
+     
+            "title": "Programming & Databases",
+            "items" : [
+     
+                {
+                    "icon": "https://cdn.simpleicons.org/c",
+                    "title": "C"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/javascript",
+                    "title": "JavaScript"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/python",
+                    "title": "Python"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/mysql",
+                    "title": "SQL"
+                }
+        ]},
+        {
+            "title": "Cybersecurity & AI",
+            "items" : [
+                {
+                    "icon": "https://cdn.simpleicons.org/pytorch",
+                    "title": "PyTorch"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/tensorflow",
+                    "title": "TensorFlow"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/opencv",
+                    "title": "OpenCV"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/huggingface",
+                    "title": "NLP & LLMs"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/cloudflare",
+                    "title": "Zero Trust"
+                },
+                {
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg",
+                    "title": "PowerShell"
+                }
+            ]
+        },
+        {
+            "title" : "Web, Cloud & Tools",
+            "items": [
+                {
+                    "icon": "https://cdn.simpleicons.org/react",
+                    "title": "React"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/threedotjs",
+                    "title": "Three.js"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/flask",
+                    "title": "Flask"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/firebase",
+                    "title": "Firebase"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/docker",
+                    "title": "Docker"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/git",
+                    "title": "Git"
+                },
+                {
+                    "icon": "https://cdn.simpleicons.org/openapiinitiative",
+                    "title": "REST APIs"
+                }
+            ]
+    }
+]}
