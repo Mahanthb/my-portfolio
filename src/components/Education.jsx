@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Chrono } from 'react-chrono';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
@@ -13,85 +12,104 @@ function Education(props) {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
-  const [width, setWidth] = useState('50vw');
-  const [mode, setMode] = useState('VERTICAL_ALTERNATING');
-  const [cardHeight, setCardHeight] = useState(250);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
     fetch(endpoints.education, {
       method: 'GET',
     })
       .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-
-    if (window?.innerWidth < 576) {
-      setMode('VERTICAL');
-      setCardHeight(340);
-    }
-
-    if (window?.innerWidth < 576) {
-      setWidth('90vw');
-    } else if (window?.innerWidth >= 576 && window?.innerWidth < 768) {
-      setWidth('90vw');
-    } else if (window?.innerWidth >= 768 && window?.innerWidth < 1024) {
-      setWidth('75vw');
-    } else {
-      setWidth('50vw');
-    }
+      .then((res) => setData(res.education))
+      .catch((err) => console.error(err));
   }, []);
+
+  const selectedEducation = data?.[selectedIndex];
 
   return (
     <>
       <Header title={header} />
       {data ? (
         <Fade>
-          <div style={{ width }} className="section-content-container education-section">
+          <div className="education-section">
             <Container>
-              <Chrono
-                hideControls
-                allowDynamicUpdate
-                useReadMore={false}
-                items={data.education}
-                cardHeight={cardHeight}
-                mode={mode}
-                theme={{
-                  primary: theme.accentColor,
-                  secondary: theme.accentColor,
-                  cardBgColor: theme.chronoTheme.cardBgColor,
-                  cardForeColor: theme.chronoTheme.cardForeColor,
-                  titleColor: theme.chronoTheme.titleColor,
-                }}
-              >
-                <div className="chrono-icons">
-                  {data.education.map((education) => (education.icon ? (
-                    <img
-                      key={education.icon.src}
-                      src={education.icon.src}
-                      alt={education.icon.alt}
-                      className={education.icon.className || ''}
-                    />
-                  ) : null))}
-                </div>
-                {data.education.map((education) => (
-                  <div key={education.cardTitle} className="chrono-card-content">
-                    {education.collegeImage && (
-                      <a href={education.collegeWebsite} target="_blank" rel="noopener noreferrer">
+              <div className="education-intro">
+                <p>Select an entry to view its details.</p>
+              </div>
+              <div className="education-timeline">
+                {data.map((education, index) => {
+                  const isSelected = index === selectedIndex;
+                  return (
+                    <button
+                      className={`education-entry ${isSelected ? 'education-entry-selected' : ''}`}
+                      key={education.cardTitle}
+                      type="button"
+                      onClick={() => setSelectedIndex(index)}
+                      style={{
+                        '--education-accent': theme.accentColor,
+                        '--education-card': theme.cardBackground,
+                        '--education-border': theme.cardBorderColor,
+                        '--education-text': theme.color,
+                      }}
+                      aria-pressed={isSelected}
+                    >
+                      <span className="education-marker" aria-hidden="true">
+                        {index + 1}
+                      </span>
+                      <span className="education-entry-content">
+                        <span className="education-date">{education.title}</span>
+                        <span className="education-entry-title">{education.cardTitle}</span>
+                        <span className="education-entry-subtitle">{education.cardSubtitle}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+              {selectedEducation && (
+                <article
+                  className="education-detail"
+                  style={{
+                    '--education-accent': theme.accentColor,
+                    '--education-card': theme.cardBackground,
+                    '--education-border': theme.cardBorderColor,
+                    '--education-text': theme.color,
+                  }}
+                >
+                  <div className="education-detail-image">
+                    {selectedEducation.collegeImage && (
+                      <a
+                        href={selectedEducation.collegeWebsite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${selectedEducation.cardSubtitle} website`}
+                      >
                         <img
-                          src={education.collegeImage}
-                          alt={education.cardTitle}
-                          className={`college-image ${education.collegeImageClassName || ''}`}
+                          src={selectedEducation.collegeImage}
+                          alt={`${selectedEducation.cardSubtitle} logo`}
+                          className={`college-image ${selectedEducation.collegeImageClassName || ''}`}
                         />
                       </a>
                     )}
-                    <p>{education.cardDetailedText}</p>
                   </div>
-                ))}
-              </Chrono>
+                  <div className="education-detail-copy">
+                    <span className="education-detail-label">Education</span>
+                    <h2>{selectedEducation.cardTitle}</h2>
+                    <h3>{selectedEducation.cardSubtitle}</h3>
+                    <p>{selectedEducation.cardDetailedText}</p>
+                    <a
+                      className="education-website-link"
+                      href={selectedEducation.collegeWebsite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit institution website
+                    </a>
+                  </div>
+                </article>
+              )}
             </Container>
           </div>
         </Fade>
-      ) : <FallbackSpinner /> }
+      ) : <FallbackSpinner />}
     </>
   );
 }

@@ -1,89 +1,220 @@
-.vertical {
-    justify-content: center;
-}
-
-.vertical_alternating {
-    justify-content: center;
-}
-
 .education-section {
-    padding: 0 8px 24px;
-    box-sizing: border-box;
-    max-width: 100%;
+  width: 100%;
+  padding: 0 1rem 3rem;
+  box-sizing: border-box;
 }
 
 .education-section > .container {
-    width: 100%;
-    max-width: 100%;
+  max-width: 980px;
 }
 
-@media only screen and (max-width: 578px) {
-    .education-section {
-        padding: 0 0 24px;
-    }
-
-    div.vertical-item-row > div:nth-child(1) {
-        width: 20% !important;
-    }
-    div.vertical-item-row > div:nth-child(2) {
-        width: 65% !important;
-    }
-    div.vertical-item-row > div:nth-child(3) {
-        width: 15% !important;
-    }
+.education-intro {
+  color: var(--education-text);
+  margin: 0 auto 1.5rem;
+  text-align: center;
 }
-.chrono-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow-wrap: anywhere;
+
+.education-intro p {
+  margin: 0;
+  opacity: 0.75;
+}
+
+.education-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  position: relative;
+}
+
+.education-timeline::before {
+  background: var(--education-accent, #3d84c6);
+  content: '';
+  height: 2px;
+  left: 10%;
+  opacity: 0.35;
+  position: absolute;
+  right: 10%;
+  top: 1.35rem;
+}
+
+.education-entry {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--education-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 0.25rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.education-marker {
+  align-items: center;
+  background: var(--education-card);
+  border: 2px solid var(--education-accent);
+  border-radius: 50%;
+  color: var(--education-accent);
+  display: flex;
+  font-weight: 700;
+  height: 2.7rem;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 2.7rem;
+}
+
+.education-entry:hover .education-marker,
+.education-entry-selected .education-marker {
+  background: var(--education-accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.education-entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.education-date {
+  color: var(--education-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.education-entry-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.education-entry-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  overflow-wrap: anywhere;
+}
+
+.education-detail {
+  align-items: center;
+  background: var(--education-card);
+  border: 1px solid var(--education-border);
+  border-left: 4px solid var(--education-accent);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px #00000018;
+  color: var(--education-text);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(160px, 0.8fr) 1.4fr;
+  margin: 2rem auto 0;
+  max-width: 760px;
+  padding: 2rem;
+}
+
+.education-detail-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.college-image {
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  max-height: 180px;
+  max-width: 200px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.college-image.logo-light-background {
+  background: #fff;
+  padding: 14px;
+}
+
+.education-detail-copy h2,
+.education-detail-copy h3,
+.education-detail-copy p {
+  overflow-wrap: anywhere;
+}
+
+.education-detail-copy h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0.25rem 0;
+}
+
+.education-detail-copy h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+  opacity: 0.8;
+}
+
+.education-detail-copy p {
+  margin-bottom: 1.25rem;
+}
+
+.education-detail-label {
+  color: var(--education-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.education-website-link {
+  color: var(--education-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.education-website-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .education-section {
+    padding: 0 0.75rem 2rem;
   }
-  
-  .college-image {
-    width: 100%;
-    max-width: 200px;
+
+  .education-timeline {
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .education-timeline::before {
+    bottom: 1.35rem;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    left: 1.3rem;
+    right: auto;
+    top: 1.35rem;
+    width: 2px;
   }
 
-  .college-image.logo-light-background {
-    background: #fff;
-    padding: 14px;
-    object-fit: contain;
+  .education-entry {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.25rem 0;
+    text-align: left;
   }
 
-  .chrono-icons img.logo-light-background {
-    background: #fff;
-    padding: 4px;
-    border-radius: 4px;
-  }
-  
-  .college-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .college-subtitle {
-    font-size: 1rem;
-    color: #666;
-    margin: 5px 0;
-  }
-  
-  .college-marks {
-    font-size: 0.9rem;
-    color: #888;
-    margin: 5px 0;
+  .education-entry-content {
+    padding-top: 0.2rem;
   }
 
-  @media only screen and (max-width: 578px) {
-    .college-image {
-      max-width: 140px;
-    }
-
-    .chrono-card-content {
-      padding: 0 8px 16px;
-    }
+  .education-detail {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
   }
+
+  .education-detail-image {
+    min-height: 120px;
+  }
+}
