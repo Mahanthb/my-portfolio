@@ -61,9 +61,9 @@
 .section-content-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .Typewriter {
@@ -148,3 +148,43 @@ section.timeline-card-content div.card-description > p {
   margin-bottom: 25px;
 }
 
+@media (max-width: 576px) {
+  .App {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .MainApp {
+    margin-top: 72px;
+    min-height: calc(100vh - 72px);
+    height: auto;
+    width: 100%;
+  }
+
+  .main {
+    height: auto;
+    min-height: calc(100vh - 72px);
+  }
+
+  .header {
+    font-size: 2.25em;
+  }
+
+  .home-name {
+    font-size: clamp(2rem, 10vw, 3.25rem) !important;
+  }
+
+  .Typewriter__wrapper,
+  .Typewriter__cursor {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 577px) {
+  .home-name {
+    font-size: clamp(3rem, 6vw, 5em) !important;
+    max-width: 90vw;
+    overflow-wrap: anywhere;
+  }
+}

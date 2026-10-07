@@ -6,7 +6,22 @@
     justify-content: center;
 }
 
+.education-section {
+    padding: 0 8px 24px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.education-section > .container {
+    width: 100%;
+    max-width: 100%;
+}
+
 @media only screen and (max-width: 578px) {
+    .education-section {
+        padding: 0 0 24px;
+    }
+
     div.vertical-item-row > div:nth-child(1) {
         width: 20% !important;
     }
@@ -22,6 +37,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow-wrap: anywhere;
   }
   
   .college-image {
@@ -60,4 +76,14 @@
     font-size: 0.9rem;
     color: #888;
     margin: 5px 0;
+  }
+
+  @media only screen and (max-width: 578px) {
+    .college-image {
+      max-width: 140px;
+    }
+
+    .chrono-card-content {
+      padding: 0 8px 16px;
+    }
   }

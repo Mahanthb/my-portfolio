@@ -16,7 +16,7 @@ const styles = {
   },
   cardStyle: {
     borderRadius: 10,
-    height: 620,
+    minHeight: 560,
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -32,7 +32,7 @@ const styles = {
   },
   contentStyle: {
     flex: 1,
-    overflow: 'hidden',
+    overflow: 'visible',
   },
   linksStyle: {
     minHeight: 68,

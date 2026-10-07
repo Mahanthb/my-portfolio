@@ -15,6 +15,7 @@ function Education(props) {
   const [data, setData] = useState(null);
   const [width, setWidth] = useState('50vw');
   const [mode, setMode] = useState('VERTICAL_ALTERNATING');
+  const [cardHeight, setCardHeight] = useState(250);
 
   useEffect(() => {
     fetch(endpoints.education, {
@@ -26,6 +27,7 @@ function Education(props) {
 
     if (window?.innerWidth < 576) {
       setMode('VERTICAL');
+      setCardHeight(340);
     }
 
     if (window?.innerWidth < 576) {
@@ -44,14 +46,14 @@ function Education(props) {
       <Header title={header} />
       {data ? (
         <Fade>
-          <div style={{ width }} className="section-content-container">
+          <div style={{ width }} className="section-content-container education-section">
             <Container>
               <Chrono
                 hideControls
                 allowDynamicUpdate
                 useReadMore={false}
                 items={data.education}
-                cardHeight={250}
+                cardHeight={cardHeight}
                 mode={mode}
                 theme={{
                   primary: theme.accentColor,

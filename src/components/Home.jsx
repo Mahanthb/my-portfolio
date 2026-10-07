@@ -8,12 +8,18 @@ import FallbackSpinner from './FallbackSpinner';
 const styles = {
   nameStyle: {
     fontSize: '5em',
+    maxWidth: '100%',
+    overflowWrap: 'anywhere',
+    lineHeight: 1.1,
   },
   inlineChild: {
     display: 'inline-block',
   },
   mainContainer: {
-    height: '100%',
+    minHeight: '65vh',
+    width: '100%',
+    padding: '1rem',
+    boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -36,7 +42,7 @@ function Home() {
   return data ? (
     <Fade>
       <div style={styles.mainContainer}>
-        <h1 style={styles.nameStyle}>{data?.name}</h1>
+        <h1 className="home-name" style={styles.nameStyle}>{data?.name}</h1>
         <div style={{ flexDirection: 'row' }}>
           <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
           <Typewriter
